@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Tennis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+  <div id="superadmin-panel" class="super-panel hidden">
+    <div class="admin-controls">
+      <button id="create-table-btn">➕ Створити новий стіл</button>
+      
+      <div id="link-container" class="link-container hidden">
+        <input type="text" id="generated-url" readonly title="Посилання для судді">
+        <button id="copy-link-btn">📋 Скопіювати</button>
+      </div>
+    </div>
+    <div id="tables-list"></div>
+  </div>
+
+  <div class="top-bar">
+    <button id="next-set-btn">🔄 Новий сет / Зміна сторін</button>
+    <span id="current-table-title" style="font-weight: bold; color: #f1c40f;"></span>
+    <button id="reset-btn">Скинути матч</button>
+    <button id="delete-this-table-btn" class="hidden" style="background: #95a5a6;">❌ Видалити цей стіл</button>
+  </div>
+
+  <div class="board" id="board">
+    <div class="half player-a">
+      <input type="text" class="name-input" placeholder="Введіть ім'я..." value="Гравець 1">
+      <div class="set-wrapper">
+        <span class="set-label">Сети:</span>
+        <div class="score-box">
+          <span class="set-val">0</span>
+          <button class="minus-btn set-minus" title="Зменшити сет">−</button>
+        </div>
+      </div>
+      <div class="point-wrapper">
+        <div class="point-val">0</div>
+        <button class="minus-btn point-minus" title="Зменшити очко">−</button>
+      </div>
+    </div>
+
+    <div class="half player-b">
+      <input type="text" class="name-input" placeholder="Введіть ім'я..." value="Гравець 2">
+      <div class="set-wrapper">
+        <span class="set-label">Сети:</span>
+        <div class="score-box">
+          <span class="set-val">0</span>
+          <button class="minus-btn set-minus" title="Зменшити сет">−</button>
+        </div>
+      </div>
+      <div class="point-wrapper">
+        <div class="point-val">0</div>
+        <button class="minus-btn point-minus" title="Зменшити очко">−</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
